@@ -83,7 +83,7 @@ values."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner '"~/.spacemacs.d/logo.png"
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
@@ -106,9 +106,9 @@ values."
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
-   ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   ;; size to make separators look not too crappy.Source Code Pro
+   dotspacemacs-default-font '("wqy-zenhei"
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -254,10 +254,11 @@ you should place your code here."
   (with-eval-after-load 'org
     ;; here goes your Org config :)
     ;; ....
-    (setq org-default-notes-file "f:/org-mode/inbox.org") ;; 设置 remember 的默认文件 
+    (setq org-default-notes-file "~/.spacemacs.d/myorg-mode/inbox.org") ;; 设置 remember 的默认文件 
     (setq org-log-done t) ;; 变到 done 状态的时候，记录一下时间
-    (setq org-agenda-files (quote ("f:/org-mode/")))
+    (setq org-agenda-files (quote ("~/.spacemacs.d/myorg-mode/")))
     )
+  (spacemacs/toggle-transparency)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
